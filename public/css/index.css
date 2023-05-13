@@ -1,0 +1,8 @@
+.card > p {
+  color: red;
+  -webkit-text-fill-color: blue;
+  -webkit-text-stroke: 2px green;
+  direction: rtl;
+}
+p {
+}

@@ -1,0 +1,47 @@
+
+   
+    <header class='header'>
+      <div>
+        {{> logo}}
+      </div>
+      <nav class='header_nav'>
+            <div class="header_nav_right">
+        {{>nav list=header}}
+            </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      {{#with messages}}
+      <div class="massange">
+      <div class="massages_title">{{title}}</div>
+      {{#each list}}
+        <div class="msg">
+          <strong class="msg_name">{{name}}</strong>
+          <p class="msg_text">{{message}}</p>
+          <span class="smg_day">{{day}}</span>
+        </div>
+      {{/each}}
+      <a href="#" class="messages_link">meseges</a>
+      </div>
+      {{/with}}
+
+      <div class="form">Form</div>
+    </main>
+
+
+
+
+      
+    <footer class="footer">
+       <div>
+            {{> logo}}
+            <span class="footer_copyright">Copyright 2023-2024</span>
+       </div>
+       {{#each footer}}
+        <div>
+            <span class="footer_title">{{title}}</span>
+            {{>nav list=links isVertical=true}}
+        </div>
+        {{/each}}
+    </footer>
