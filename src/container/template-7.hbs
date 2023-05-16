@@ -1,0 +1,37 @@
+<div class='blok'>
+  {{#with hero}}
+    <h2 class='hero_title'>{{title}}</h2>
+    <p class='hero_text'>{{description}}</p>
+    <button
+      class='button'
+      href='{{button.url}}'
+    >{{button.text}}</button>
+  {{/with}}
+</div>
+
+<div class='about_blok'>
+  {{#with about}}
+    <h2 class='about_title'>{{heading}}</h2>
+    <p class='about_text'>{{info}} </p>
+  {{/with}}
+</div>
+
+<div class='artical'>
+  <h2 class='article_title'>Our Articles</h2>
+  <button class='button_article' href='#'>View All</button>
+</div>
+
+<div class='card'>
+  {{#each articles}}
+    <div class='card_blok'>
+      <image class='img' src='{{photo}}'>
+        {{#if isNew}}<p>New</p>{{/if}}
+      </image>
+      <h2 class='card_title'>{{name}}</h2>
+      <p class='card_text'>{{description}}</p>
+      <button class='btn'>Reed All</button>
+
+    </div>
+  {{/each}}
+
+</div>
