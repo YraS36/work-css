@@ -173,7 +173,6 @@
 .advantages {
   display: flex;
   gap: var(--space-l);
-  align-items: flex-start;
 }
 .advantages > div {
   display: flex;
@@ -257,4 +256,10 @@
 .form_checkbox > input{
   border: 1px solid #767676;
 border-radius: 4px;
+}
+.advantages{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 1fr 2fr;
+
 }
