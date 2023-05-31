@@ -17,7 +17,7 @@ body {
   --page_width-big: 1260px;
   --page_width-medium: 1000px;
   --page_width-small: 700px;
-  --page_width-mini:320px;
+  --page_width-mini: 320px;
 
   --speicing-1: 8px;
   --speicing-2: 12px;
@@ -74,31 +74,31 @@ body {
     }
     .page_content {
       max-width: var(--page_width-mini);
-  }
-  @media all and (width < 700px) {
-    .card_customer {
-      display: flex;
-      flex-direction: column;
     }
-    .large {
-      flex-direction: column;
+    @media all and (width < 700px) {
+      .card_customer {
+        display: flex;
+        flex-direction: column;
+      }
+      .large {
+        flex-direction: column;
+      }
+      .hero_button {
+        grid-template-columns: 1fr;
+        gap: var(--speicing-5);
+      }
     }
-    .hero_button {
-      grid-template-columns: 1fr;
-      gap: var(--speicing-5);
-    }
-  }
-  @media all and (width < 500px) {
-    .fe {
-      grid-row: inherit;
-    }
-    .features_grid_5 {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+    @media all and (width < 500px) {
+      .fe {
+        grid-row: inherit;
+      }
+      .features_grid_5 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
     }
   }
 }
-
 @layer component {
   .button {
     text-decoration: none;
