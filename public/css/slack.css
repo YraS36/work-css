@@ -1,4 +1,4 @@
-@layer component, variant, main, adaptive;
+@layer normalize, component, variant, main, adaptive;
 
 @font-face {
   font-family: 'HelveticaNeueBold';
@@ -40,118 +40,6 @@ body {
   --transition: 0.7s;
 }
 
-@layer adaptive {
-  @media all and (1260px <= width) {
-    .page_content {
-      max-width: var(--page_width-big);
-    }
-  }
-  @media all and (1000px <= width < 1260px) {
-    .page_content {
-      max-width: var(--page_width-medium);
-    }
-  }
-  @media all and (width < 1000px) {
-    .page_content {
-      max-width: var(--page_width-small);
-    }
-    .hero_image {
-      position: static;
-      width: 100%;
-      order: -1;
-    }
-    .hero_content {
-      max-width: 100%;
-    }
-    .features_section {
-      background: none;
-    }
-  }
-
-  @media all and (width < 600px) {
-    .features_grid_4 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .page_content {
-      max-width: var(--page_width-mini);
-    }
-    @media all and (width < 700px) {
-      .card_customer {
-        display: flex;
-        flex-direction: column;
-      }
-      .large {
-        flex-direction: column;
-      }
-      .hero_button {
-        grid-template-columns: 1fr;
-        gap: var(--speicing-5);
-      }
-    }
-    @media all and (width < 500px) {
-      .fe {
-        grid-row: inherit;
-      }
-      .features_grid_5 {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-      }
-    }
-  }
-}
-@layer component {
-  .button {
-    text-decoration: none;
-    color: var(--color-black);
-    padding: var(--speicing-4);
-    border-radius: 4px;
-    text-align: center;
-    border: 1px solid transparent;
-  }
-  .clik {
-    transition: opacity var(--opacity-1);
-  }
-  .clik:hover {
-    opacity: var(--opacity-1);
-    cursor: pointer;
-  }
-  .clik:active {
-    opacity: var(--opacity-2);
-  }
-  .icon {
-    display: block;
-    height: 48px;
-    width: 48px;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .dabl_line {
-    line-height: 1.5em;
-  }
-}
-@layer variant {
-  .button_primary {
-    color: var(--color-white);
-    background: var(--color-primary);
-  }
-  .button_secondary {
-    color: #611f69;
-    border-color: var(--color-primary);
-    border-width: 2px;
-  }
-  .page_section_light {
-    background-color: var(--color-light);
-  }
-  .feat_icon {
-    height: 48px;
-    width: 48px;
-  }
-  .icon_arrow {
-    width: 24px;
-    height: 14px;
-    background-image: url('/svg/arrow-right.svg');
-  }
-}
 @layer main {
   .page {
     display: grid;
@@ -349,5 +237,118 @@ body {
     margin: 6px;
     margin-top: 0px;
     font-size: var(--size-4);
+  }
+}
+@layer component {
+  .button {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: var(--speicing-4);
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .clik {
+    transition: opacity var(--opacity-1);
+  }
+  .clik:hover {
+    opacity: var(--opacity-1);
+    cursor: pointer;
+  }
+  .clik:active {
+    opacity: var(--opacity-2);
+  }
+  .icon {
+    display: block;
+    height: 48px;
+    width: 48px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .dabl_line {
+    line-height: 1.5em;
+  }
+}
+@layer variant {
+  .button_primary {
+    color: var(--color-white);
+    background: var(--color-primary);
+  }
+  .button_secondary {
+    color: #611f69;
+    border-color: var(--color-primary);
+    border-width: 2px;
+  }
+  .page_section_light {
+    background-color: var(--color-light);
+  }
+  .feat_icon {
+    height: 48px;
+    width: 48px;
+  }
+  .icon_arrow {
+    width: 24px;
+    height: 14px;
+    background-image: url('/svg/arrow-right.svg');
+  }
+}
+
+@layer adaptive {
+  @media all and (1260px <= width) {
+    .page_content {
+      max-width: var(--page_width-big);
+    }
+  }
+  @media all and (1000px <= width < 1260px) {
+    .page_content {
+      max-width: var(--page_width-medium);
+    }
+  }
+  @media all and (width < 1000px) {
+    .page_content {
+      max-width: var(--page_width-small);
+    }
+    .hero_image {
+      position: static;
+      width: 100%;
+      order: -1;
+    }
+    .hero_content {
+      max-width: 100%;
+    }
+    .features_section {
+      background: none;
+    }
+  }
+
+  @media all and (width < 600px) {
+    .features_grid_4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .page_content {
+      max-width: var(--page_width-mini);
+    }
+    @media all and (width < 700px) {
+      .card_customer {
+        display: flex;
+        flex-direction: column;
+      }
+      .large {
+        flex-direction: column;
+      }
+      .hero_button {
+        grid-template-columns: 1fr;
+        gap: var(--speicing-5);
+      }
+    }
+    @media all and (width < 500px) {
+      .fe {
+        grid-row: inherit;
+      }
+      .features_grid_5 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
   }
 }
